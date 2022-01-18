@@ -1,8 +1,21 @@
+body{
+    overflow-x: hidden;
+}
 .card-title{
     overflow: hidden;
     color:rgba(0, 0, 0, 0.84);
     font-weight: 500;
     font-size: 16px;
     white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.btn{
+background-color: rebeccapurple;
+border: none;
+color: white;
+}
+.modal-desc{
+    overflow: hidden;
     text-overflow: ellipsis;
 }
