@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./mainHeader.css";
-import { toast } from "react-toastify";
+import { toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { InputGroup, Input, Button, Spinner } from "reactstrap";
@@ -27,7 +27,7 @@ export const MainHeader = () => {
       .catch((err) => {
         // console.log(err);
         setLoading(true);
-        toast.error(`${err.response.data.error.message}`);
+        toast.info("Type something in the search box ",{theme: "dark", transition: Slide,hideProgressBar: true});
       });
   };
 
@@ -80,7 +80,7 @@ export const MainHeader = () => {
           <div className=" mb-3">
             <InputGroup size="lg" className=" mb-3">
               <Input
-                placeholder="Search your faviourte books here..."
+                placeholder="Search books here..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
